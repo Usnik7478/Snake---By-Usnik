@@ -1,7 +1,6 @@
 from turtle import Turtle
 from random import randint, choice
 
-
 class Food(Turtle):
 
     def __init__(self):

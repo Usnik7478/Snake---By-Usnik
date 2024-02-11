@@ -35,6 +35,7 @@ class Snake:
         self.creat_snake()
         self.head = self.snake_body[0]
 
+
     def move(self):
         for i in range(len(self.snake_body) - 1, 0, -1):
             x = self.snake_body[i - 1].xcor()
