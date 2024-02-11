@@ -29,7 +29,7 @@ border.forward(580)
 screen.tracer(0)
 
 snake = Snake()
-food = Food()
+
 score = Score()
 
 
@@ -43,6 +43,7 @@ screen.onkey(snake.right, "d")
 def runGame():
     score.clear()
     score.reset()
+    food = Food()
     game_is_on = True
     while game_is_on:
         screen.update()
@@ -58,12 +59,14 @@ def runGame():
         if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
             score.reset()
             snake.reset()
+            food.reset()
             game_is_on = False
 
         for i in snake.snake_body[1:]:
             if snake.head.distance(i) < 10:
                 score.reset()
                 snake.reset()
+                food.reset()
                 game_is_on = False
 
 
