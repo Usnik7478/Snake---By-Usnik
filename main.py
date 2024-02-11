@@ -1,3 +1,5 @@
+#By Usnik Daripa
+
 import turtle
 import time
 from snake import Snake
